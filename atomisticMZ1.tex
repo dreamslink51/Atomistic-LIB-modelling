@@ -1,0 +1,705 @@
+\documentclass[a4paper, 11 pt]{article}
+%\documentclass[smallextended]{svjour3}
+%\documentclass[12pt]{iopart}
+%\documentclass{slides}\pagestyle{empty}
+%\usepackage{amsmath}
+%\def\stackrel#1#2{\mathrel{\mathop{#2}\limits^{#1}}}
+\usepackage{amsfonts}
+\usepackage{eufrak}
+%\usepackage{yfonts}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{ulem}
+\usepackage{cancel}
+%\usepackage{stmaryrd}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{epsfig}
+\usepackage{color}
+\usepackage{graphics}
+\usepackage{setspace}
+\usepackage{anyfontsize}
+%\usepackage{circledsteps}
+\newcommand {\rrow}{r}
+\newcommand{\zero}{\mathbf{0}}
+\newcommand{\myd}{ {\mbox{d}}^{ \uparrow}}
+\newcommand{\dpst}{ d_{P}}
+\newcommand{\myPhi}{ {{\Phi}}^{ \uparrow}}
+\newcommand{\myPhit}{ {{\tilde{\Phi}}}^{ \uparrow}}
+\newcommand{\ct}{\tau}
+\newcommand{\tp}{t_p}
+\newcommand{\tsig}{\sigma^{1t}_p}
+\newcommand{\ccr}{ {\mbox{\small$\Lambda$}}}
+\newcommand{\ocr}{\mbox{\small$\Lambda$}}
+\newcommand{\os}{s^2}
+\newcommand{\cs}{\bar{s}^2}
+\newcommand{\sep}{\Delta}
+\newcommand{\eo}{E_0}
+%\newcommand{\ecm}{E_0}
+\newcommand{\ec}{E}
+\newcommand{\eom}{E}
+\newcommand{\bsigma}{\bar{\sigma}}
+\newcommand{\btsig}{\bsigma^{1t}_p}
+\newcommand{\ctor}{C_\tau ( \qqh ) }
+\newcommand{\dk}{d^1_{\mbox{\large{$\kappa$}}}}
+\newcommand{\dkk}{d^2_{\mbox{\large{$\kappa$}}}}
+\newcommand{\hk}{H^{\mbox{\large{$\kappa$}}_1}_{\Phi_0,\Phi_1}}
+\newcommand{\hkk}{H^{\mbox{\large{$\kappa$}}_2}_{\Phi_0,\Phi_1}}
+\newcommand{\hkt}{\tilde{H}^{\mbox{\large{$\kappa$}}_1}_{\Phi_0,\Phi_1}}
+\newcommand{\hkup}{H^{\uparrow\mbox{\large{$\kappa$}}_1}_{\Phi_0,\Phi_1}}
+\newcommand{\hkupt}{\tilde{H}^{\uparrow\mbox{\large{$\kappa$}}_1}_{\Phi_0,\Phi_1}}
+\newcommand{\dtk}{d^2_{\mbox{\large{$\kappa$}}}}
+\newcommand{\ztk}{z^2_{\mbox{\large{$\kappa$}}}}
+\newcommand{\ctwo}{{ C_{\mbox{\gotic T}}^2}}
+\newcommand{\ck}{{ C_{\mbox{\gotic T}}^k}}
+%\newcommand{\t}{\mbox{\gotic T}}
+\newcommand{\cinf}{{ C_{\mbox{\gotic T}}^\infty}}
+
+\newcommand{\half}{{\textstyle \frac{1}{2}}}
+\newcommand{\fourth}{{\textstyle \frac{1}{4}}}
+\newcommand{\third}{{\textstyle \frac{1}{3}}}
+\newcommand{\sixth}{{\textstyle \frac{1}{6}}}
+\newcommand{\thfourth}{{\textstyle \frac{3}{4}}}
+\newcommand\smallfrac[2]{{\textstyle \frac{#1}{#2}}}
+\newcommand{\hhalf}{{\scriptstyle \frac{1}{2}}}
+\newcommand{\phivec}{{\boldsymbol \phi}}
+\newcommand{\phitilde}{{\tilde \phi}}
+\newcommand{\phivectilde}{{\tilde{\boldsymbol \phi}}}
+\newcommand{\cvec}{{\bf c}}
+\newcommand{\yvec}{{\bf y}}
+\newcommand{\Yvec}{{\bf Y}}
+\newcommand{\evec}{{\bf e}}
+\newcommand{\nvec}{{\bf n}}
+\newcommand{\pvec}{{\bf p}}
+\newcommand{\uvec}{{\bf u}}
+\newcommand{\npvec}{{\bf n'}}
+\newcommand{\Nvec}{{\bf N}}
+\newcommand{\Npvec}{{\bf N'}}
+\newcommand{\nuvec}{{\boldsymbol \nu}}
+\newcommand{\nuhat}{{\bf \hat \nuvec}}
+\newcommand{\nuphat}{{\bf \hat \nuvec'}}
+\newcommand{\nupphat}{{\bf \hat \nuvec''}}
+\newcommand{\svec}{{\bf s}}
+
+\newcommand\sgn{\,{\hbox{\rm sgn}}}
+
+\newcommand{\avec}{{\bf a}}
+\newcommand{\bvec}{{\bf b}}
+\newcommand{\Cvec}{{\bf C}}
+\newcommand{\qvec}{{\bf q}}
+\newcommand{\rvec}{{\bf r}}
+\newcommand{\rvecp}{{\bf r'}}
+\newcommand{\vvec}{{\bf v}}
+\newcommand{\wvec}{{\bf w}}
+\newcommand{\xvec}{{\bf x}}
+\newcommand{\Xvec}{{\bf X}}
+\newcommand{\fvec}{{\bf f}}
+\newcommand{\Hvec}{{\bf H}}
+%\newcommand{\evec}{{\bf e}}
+\newcommand{\Fvec}{{\bf  F}}
+\newcommand{\zvec}{{\bf z}}
+%\newcommand{\Zvec}{{\bf Z}}
+\newcommand{\gvec}{{\bf g}}
+
+%\newcommand{\qqh}{\hat{Q}_{per}}
+%\newcommand{\qq}{{Q}_{per}}
+\newcommand{\qqh}{\hat{C}}
+\newcommand{\qq}{{{C}}}
+
+\newcommand{\uqh}{\hat{U}_{per}}
+\newcommand{\uq}{{U}_{per}}
+
+\newcommand{\Pbar}{{\bar P}}
+\newcommand{\Phat}{{\hat P}}
+\newcommand{\Qhat}{{\hat Q}}
+\newcommand{\etilde}{{\tilde e}}
+\newcommand{\Fhat}{{\hat F}}
+\newcommand{\Chat}{{\hat C}}
+\newcommand{\Bhat}{{\hat B}}
+%\newcommand{\nhat}{{\bf \hat n}}
+\newcommand{\nhat}{{\mathbf   n}}
+%\newcommand{\nphat}{{\bf \hat n'}}
+\newcommand{\nphat}{{\mathbf n'}}
+\newcommand{\Hhat}{{\bf \hat H}}
+\newcommand{\Ehat}{{\hat E}}
+\newcommand{\epsilontilde}{{\tilde \epsilon}}
+\newcommand{\supp}{\,\text{supp}\,}
+
+\newcommand{\Rcal}{{\cal R}}
+
+\newcommand{\Rr}{{\mathbb R}}
+\newcommand{\Cc}{{\mathbb C}}
+\newcommand{\czero}{{ C_{\mbox{\gotic T}}^0}}
+%\newcommand{\ctor}{C_\tau \lb {\mbox{\Large{$\kappa$}} \setminus P}\rb}
+
+\newcommand{\Lip}{\text{Lip}}
+\newcommand{\Ccal}{{\cal C}}
+
+\newcommand{\inv}{\,\text{\rm inv}}
+\newcommand{\Ical}{{\cal I}}
+\newcommand{\epsilonvec}{{\boldsymbol \epsilon}}
+\newcommand{\nihat}{{\nhat_\Ical}}
+\newcommand{\hhat}{{\bf \hat h}}
+\newcommand{\dd}{\mbox{\huge .}}
+
+\newcommand\Ltilde{{\tilde L}}
+\newcommand\nvectilde{{\bf \tilde n}}
+
+%\newcommand{\oslash}{\circ}%Replace by AMSTex symbol
+%\newsymbol \oslash 227F
+%\newsymbol \oslash 127F
+
+%\newcommand{\etal}{{\it et al\ }}
+
+%\newcommand{\intr}{{\hbox{\rm int}\,}}
+%\newcommand{\Imag}{{\hbox{\rm Im}\,}}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newtheorem{lem}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollary}
+%\newtheorem{conj}[thm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+
+%\setlength{\textheight}{8.0truein}
+
+%\setlength{\textwidth}{6truein}
+%\setlength{\textwidth}{16.0cm}
+%\setlength{\evensidemargin}{.1in}
+%\setlength{\oddsidemargin}{.1in}
+
+
+
+%\font\fontone= cmbx10 scaled 2000
+\font\fontone= cmr10 scaled 2000
+%\font\fonttwo= msbm10 scaled 1000
+\font\fonttwo=cmbx10 scaled 700
+%\font\font3=utmr8a scaled 350
+\font\fontr=msbm10 scaled 1400
+%
+%%%%%%%%%%%%%%%%%%author's macros%%%%%%%%%%%%%%%
+
+\newcommand{\txt} {\textstyle}
+\newcommand{\dst} {\displaystyle}
+\font\goth=eufm10 scaled 1400
+\font\gotic=eufm10 scaled 700
+%\newcommand{\gotic}{\em }
+%\newfont{\goth}{EUSM9}
+%\newfont{\gotic}{EUFM10}
+\def \ul{\underline}
+\newcommand{\la} {\lambda}
+\newcommand{\lc} {$\lambda_c$ }
+\newcommand{\eps} {\epsilon}
+\newcommand{\veps} {\varepsilon}
+\newcommand{\ds} {\dst}
+%\newcommand{\half} {\dst\frac{1}{2}}
+\newcommand{\Ex} {{\bf Examples }}
+
+
+%\newcommand{\Thm} {{\bf Theorem }}
+%\newcommand{\Pf} {{\em Proof:  }}
+
+
+\newcommand{\z} {{\zeta }}
+%\newcommand{\lt} {{\bf {\langle}}}
+%\newcommand{\rt} {{\bf {\rangle}}}
+\newcommand{\lt} {\ {\bf <}}
+\newcommand{\rt} {{\bf >}\ }
+\newcommand{\G} {\Gamma}
+%\newcommand{\,} {\  }
+%\newcommand{\to} {\rightarrow}
+\newcommand{\C} {\mbox{\fontr{C}}}
+\newcommand{\lb} {\left(}
+\newcommand{\rb} {\right)}
+%\newcommand{\Def} {{\bf Definition}}
+%\newcommand{\Note} {{\bf Note}}
+\newcommand{\cosec} {\mbox{cosec}}
+\newcommand{\res} {\ res  }
+%\newcommand{\dfrac} {\dst\frac}
+\newcommand{\lbr} {\left\{}
+\newcommand{\rbr} {\right\}}
+\newcommand{\ls} {\left[}
+\newcommand{\rs} {\right]}
+\newcommand{\bl} {\Bigl(}
+\newcommand{\brr} {\Bigr)}
+\newcommand{\ld} {\left.}
+\newcommand{\rd} {\right.}
+\newcommand{\lv} {\left|}
+\newcommand{\rv} {\right|}
+%\newcommand{\qed} {\hspace{130mm} {\em QED.} }
+\newcommand{\cross} {\mbox{\hspace{-5 mm} / \hspace{1 mm}}}
+\newcommand{\al} {\alpha}
+\newcommand{\myre} {\mbox{\goth{Re }}}
+\newcommand{\myim} {\mbox{\goth{Im }}}
+\newcommand{\Arg} {\mbox{Arg}}
+\newcommand{\Log} {\mbox{Log }}
+%\newcommand{\ln} {\mbox{ln }}
+\newcommand{\Do} { \mbox{\goth{D} } }
+\newcommand{\addp} {\addtocounter{prop}{1}}
+\newcommand{\addd} {\addtocounter{defn}{1}}
+\newcommand{\prp}{\addp \noindent {\bf Proposition \theprop .}\ }
+%\newcommand{\def}{\addd  \noindent {\bf Definition \thedefn .}\ }
+\newcommand{\epp} {\varepsilon}
+\newcommand{\be} {\beta}
+\newcommand{\cf} {(n-1)}
+\newcommand{\cfl} {- \ \dst\dst\frac{1}{C_a} }
+\newcommand{\ga} {\gamma}
+\newcommand{\bga}{\begin{array}{l}}
+\newcommand{\ena}{\end{array}}
+\newcommand{\bge}{\begin{equation}}
+\newcommand{\bgea}{\begin{equation} \begin{array}{l} }
+\newcommand{\ene}{\end{equation}}
+\newcommand{\enea}{ \end{array} \end{equation}}
+\newcommand{\kk}{\mbox{\Large{$\kappa$}}}
+%\newcommand{\prp}{\add \noindent {\bf Proposition \theprop .}\ }
+\newcommand{\R} {\mbox{\fontr{R}}}
+\newcommand{\T}{\mbox{\goth t}}
+\newcommand{\text}{ }
+%\newcommand{\t }{\mbox{\goth t}}
+
+%%Parrys
+\newcommand{\bs}{\bf}
+\newcommand{\bsd}{{\bs d}}
+\newcommand{\bse}{{\bs e}}
+\newcommand{\bsl}{{\bs l}}
+\newcommand{\bsu}{{ \bs u}}
+\newcommand{\bsx}{{\bs x}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
+\newcommand{\pa}{\partial}
+
+
+%%%%
+\renewcommand{\v}{\mathbf{V}}
+\newcommand{\vi}{\mathbf{\overline{v}}_i}
+\newcommand{\Vi}{\mathbf{\overline{V}}_i}
+\newcommand{\Vj}{\mathbf{\overline{V}}_j}
+\newcommand{\vvi}{\mathbf{v}_i}
+\newcommand{\vvj}{\mathbf{v}_j}
+\newcommand{\VVi}{\mathbf{V}_i}
+\newcommand{\Wi}{\mathbf{\overline{W}}_i}
+\newcommand{\WWi}{\mathbf{W}_i}
+\newcommand{\om}{\omega}
+\newcommand{\mr}{\kappa}
+\newcommand{\vo}{\mathbf{v}_0}
+\newcommand{\dvi}{d \mathbf{v}_i}
+\newcommand{\D}{\mathcal{D}_t^i}
+\newcommand{\ns}{s}
+\newcommand{\myap}{\stackrel{\mbox{\fontsize{1.8mm}{2mm}\selectfont \color{blue}  $(\ref{f0aver}) $    }}{\approx  \ \ \   } }
+
+%\usepackage{calrsfs}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+%\newcommand{\st}{\pazocal{C}}
+\newcommand{\st}{\mbox{{\fontsize{12pt}{12pt}\selectfont $\mathcal{C}$}}}
+\renewcommand{\sl}{\mbox{{\fontsize{12pt}{12pt}\selectfont $\mathcal{L}$}}}
+%%%%
+
+\newcommand{\ax}{\mbox{acx}}
+
+\RequirePackage{fix-cm}
+%%Parrys
+\begin{document}
+
+\title{}
+\author{Maxim Zyskin}
+\date{October, 2020}
+
+
+
+
+
+
+\section{Molecular dynamics, diffusion coefficients}
+\subsection{Green-Kubo}
+It is generally accepted that continuum electrochemical transport equations, both in electrodes and electrolytes, are of diffusion type (see, for example, our continuum modeling review and/or a crude version in Appendix 1). Such equations are dissipative, time-irreversible, and preserving total particle number or mass.
+
+One of the goals of molecular dynamics simulations would be to determine parameters of continuum models from details of microscopic forces between particles. To have good match with continuum theory, one should determine how fluxes of the appropriate macroscopic quantities would depend from the values and the gradients of those macroscopic quantizes, such as species concentrations, temperature, pressure. We will describe an approach to do so based on Onsager's decay of fluctuation hypothesis. However we will first describe earlier methods based on  Green-Kubo or linear response.  Those latter methods are more studies and wider used, however, there involve assumptions such as Brownian motion or a prescription of dissipative function, and seem to provide no guarantee apriory  that diffusion coefficients computed that way accurately reproduce required macroscopic fluxes.
+
+
+In addition, in any of the adopted methods, there is a fundamental difficulty since dynamics of finite particle systems is time-reversible, while continuum dynamics it aims to describe is not. Thus a good choice of thermostat is required in molecular dynamics simulations for any chance to reconcile the two approaches, which on one hand provides dissipation, but on the other, does not provide artifacts altering underlying microscopic physics.
+
+There are several computational approaches in the literature to determine continuum model parameters, such as diffusion coefficients. Most commonly used approach is Green-Kubo or linear response theory. Green-Kubo approach tacitly {\it assumes} that in a certain statistical sense particle dynamics can be well approximated by a Brownian motion. The latter is well understood and has solid mathematical footing, due to works of Ito, Stratonovich, and others.
+
+It is well-known (since Einstein, 1905) that in Brownian motion of independent particles driven by white noise (that noise accounting for thermal fluctuations) the mean square displacement of a particle is proportional to time. This motivates to {\it define} diffusion coefficient, in the case of isotropic $d$ dimensional space   and for a single species, as
+\bgea
+\dst D =  \lim_{t\rightarrow \infty} \frac{1}{2 t d} \lt \lb \mathbf{x}(t) - \mathbf{x}(0) \rb^2 \rt,
+\enea
+(Relation to linear response): since
+\bgea
+x(t) - x(0) = \dst\int_0^t u (\tau) d \tau ,
+\enea
+we get, after some rearranging,
+\bgea
+D = \dst  \lim_{t\rightarrow \infty} \frac{1}{t d} \int_0^t d \tau_1 \int_0^{t-\tau_1}d\tau_2 \lt u(\tau_1) u (\tau_1 + \tau_2) \rt
+\enea
+In the context of MD, and assuming that dynamics is ergodic, this suggests that diffusion coefficient can be modeled by a linear fit to the {\it displacement autocorrelation function}, with averaging performed as ({\bf select: multiple choice}):
+
+\noindent time series average for a selected marker particle,
+\bgea
+\ax_1(t) \approx \dst \sum_{i=1}^{N} \frac{1}{2   d N} \lt \lb \mathbf{x}(t+ \tau_i) - \mathbf{x}(\tau_i) \rb^2 \rt   {\stackrel{\mbox{\tiny linear fit}}{\approx}}  D t + C
+\enea
+or sample average,
+\bgea
+\ax_{\mbox{\tiny N}}(t) \approx \dst \sum_{i=1}^{N} \frac{1}{2 d N} \lt \lb \mathbf{x}_i(t) - \mathbf{x}_i(0) \rb^2 \rt   {\stackrel{\mbox{\tiny linear fit}}{\approx}}  D t + C
+\enea
+or ensemble  average, with initial configurations sampled in the phase space with weights $\la_i$, drawn according to some probability distribution, say Gibbs
+\bgea
+\ax_e(t) \approx \dst \frac{1}{Z} \sum_{i=1}^{N}  \frac{\la_i}{2 d}  \lt \lb \mathbf{x}_i(t) - \mathbf{x}_i(0) \rb^2 \rt   {\stackrel{\mbox{\tiny linear fit}}{\approx}}  D t + C ,
+ \\
+ \dst \sum_{i=1}^{N} \la_i =Z.
+\enea
+
+\subsection{Linear response}
+It is understood, since the work of Einstein and Smolukhovski, that there is a relation between diffusion coefficient and mobility, balancing diffusion and drift
+\bgea
+D = \mu k_b  T
+\enea
+Therefore, one can compute diffusion coefficient by computing response of equilibrium system to applied generalized force. In the Newman's continuum modeling framework of concentrated solution theory, the driving force is gradient of chemical potential. This is not easy to implement, but kinetic theory of gases suggests that response to gradient of chemical potential or to a force is the same. 
+
+Linear response theory proceeds along the following lines:
+
+Let $B (\Gamma), \Gamma = (p,q)$ be a function of interest on the phase space. it's time dependence is determinged by dynamics, $ B(t) = B (\Gamma (t)) $
+For statistical averages, we compute:
+\bgea
+\lt B(t) \rt = \dst\int B(t) f(\Gamma) d\Gamma := \dst\int B(0) f(\Gamma,t) d\Gamma
+\\
+\frac{d}{dt} \lt B(t) \rt = \dst\int \dot{\Gamma}\frac{\partial B(t) }{\partial \Gamma} f (\Gamma) d\Gamma = - \dst\int   B(t) \frac{\partial  }{\partial \Gamma} \lb \dot{\Gamma} f (\Gamma)\rb  d\Gamma
+\\
+\lt B(t) \rt =   \lt B(t) \rt - \ds\int_0^t \dst\int d\Gamma B(s) \frac{\partial  }{\partial \Gamma} \lb \dot{\Gamma} f (\Gamma,0) \rb ds
+\enea
+If $f=f_0$,   $\frac{\partial  }{\partial \Gamma} \lb \dot{\Gamma} f_0 (\Gamma)\rb = - \be \dot{H_0} f_0 (\Gamma)= -   \be  V \  J.F \ f_0 (\Gamma)$
+\bgea
+\lt J(t) \rt =  \be V \dst\int_0^t \lt J(s) J(0) \rt ds \ F \quad \mbox{Green-Kubo},
+\\
+L =   \be V \dst\int_0^{\infty} \lt J(s) J(0) \rt ds
+\enea
+
+\subsection{Stefan-Maxwell-Onsager}
+Onsager decay of fluctuation hypothesis is that autocorrelation functions of fluctuating quantities satisfy (in the linearized approximation)   {\it the same equations}  as {\it linearization of continuum transport equations} will provide. Such theory was developed by Monroe,  Wheeler, Newman \cite{mwn2006} , \cite{mwn2009} , \cite{mwn2015}
+
+
+In continuum theory, we have material balance equation for each of the species molar concentrations  $\lbr c_i\rbr,$
+\bgea
+\dst \frac{\partial c_i}{\partial t} = - \nabla \mathbf{J}_i  ,
+\\
+\mathbf{J}_i  = c_i \mathbf{v}_i ,
+\label{massbalance}
+\enea
+where $\mathbf{v}_i$ are macroscopic velocities of species $i$.
+
+Equation of state at constant pressure implies a relation among molar concentrations,
+\bgea
+\dst\sum_{i=1}^n c_i \bar{V}_i \lb \mathbf{y} \rb =1,
+\enea
+where $\mathbf{y} = (y_1, y_2, \ldots y_n)$ are molar fractions,  $y_j = \frac{c_j}{c_T}$ , $c_T = \sum_j c_j,$ and $\bar{V}_i$ are
+%reduced
+partial volumes, $\bar{V}_i =\ld \lb \dst\frac{\partial V}{\partial n_i}\rb \rv_{P,T, n_j,j\neq i}.$
+It follows that
+\bgea
+\dst \frac{1}{c_T} = \dst\sum_{i=1}^n y_i \bar{V}_i \lb \mathbf{y} \rb
+\label{cT}
+\enea
+
+By general principles of nonequilibrium thermodynamcs, we expect to have a relationship between generalized forces and fluxes, which ensures nonnegative entropy production rate. For systems which are locally near equilibrium, and assuming constant temperature and pressure regime, this implies Stefan-Maxwell relations between gradients of chemical potentials ("forces")  and the fluxes, of the form
+\bgea
+c_i \nabla \mu_i = R  T \dst \sum_j \frac{c_i c_j}{c_T D_{ij}} \lb \mathbf{v}_j - \mathbf{v}_i\rb ,
+\\
+\mbox{ or }  \nabla \mu_i = R  T \dst \sum_j \frac{ y_j}{D_{ij}} \lb \mathbf{v}_j - \mathbf{v}_i\rb .
+\label{SterMax}
+\enea
+%(where $c_T= \sum_i c_i.$)
+Note that due to thermodynamic Gibbs-Dulem relations, see e.g. \cite{GoyalMonroe},
+\bgea
+\sum_i c_i \nabla \mu_i = 0.
+\enea
+Products of such generalized forces and fluxes determine entropy production rate,
+\bgea
+T g_s = - \sum_i c_i \nabla \mu_i \lb \mathbf{v}_i - \mathbf{v}_{\mbox{ref}} \rb.
+\label{gs}
+\enea
+Contribution of reference velocity in (\ref{gs}) cancels due to Gibbs-Duhem, and so any reference velocity, e.g. mass average, or volume average, may be used. $Tg_s$ is always nonnegative, since due to Stefan-Maxwell relations (\ref{SterMax}) and Onsager's symmetry, $D_{ij}=D_{ji},$
+\bgea
+T g_s = \frac{R  T}{2} \dst\sum_{ij}  \frac{c_i c_j}{c_T D_{ij}} \lb \mathbf{v}_i -\mathbf{v}_j \rb^2 \geq 0.
+\enea
+
+Linearization of continuum modeling equations is easiest in terms of molar fractions $\mathbf{y},$ only $(n-1)$ of which are linearly independent, since $\dst\sum_{i=1}^{n} y_i =1.$ The easiest way to deal with the latter is to express one of $y$ in terms of all other $y'$, say
+\bgea
+y_n = - \dst\sum_{i=1}^{n-1} y_i.
+\enea
+
+
+We linearize the equations by expanding those to the first order about the thermodynamic equilibrium values (denoted by $\infty$ superscript) for which concentrations are constants and species velocities are zero:
+\bgea
+y_i = y_i^\infty + y_i^{(1)}+ \ldots, i=1,2\ldots n-1, \quad y_n = - \dst\sum_{i=1}^{n-1} y_i,
+\\
+\mathbf{v}_i = 0 + \mathbf{v}_i^{(1)} + \ldots .
+\enea
+%Linearization of the chemical potentials yields
+Only $n-1$ Stefan-Maxwell relations are independent, since $\sum_{i=1}^{n} y_i \nabla \mu_i =0.$  Linearization of the Stefan-Maxwell equations yields:
+\bgea
+\nabla \mu_i^{(1)} = RT \dst \sum_{j=1}^{n} \frac{y_j^{\infty}}{D_{ij}^{\infty}} \lb \mathbf{v}_j^{(1)} - \mathbf{v}_i^{(1)}\rb , i =1,2,\ldots n-1,
+\\
+\nabla \mu_i^{(1)} = \dst \frac{RT}{y_i^{\infty}}\sum_{j=1}^{n-1} Q_{ij} \nabla  y_j^{(1)}  , i =1,2,\ldots n-1,
+\\
+Q_{ij} = \dst \frac{1}{RT} \frac{\partial \mu_i^{\infty} }{\partial \ln y_j} .
+\label{linStefMax}
+\enea
+Linearization of the material balance equations (\ref{massbalance}), expressed in terms of molar fractions, yields
+\bgea
+\dst \frac{\partial  y_i^{(1)}}{\partial t} + \frac{ y_i^{\infty}}{c_T^{\infty} } \frac{\partial  c_T^{(1)}}{\partial t} = - y_i^{\infty}  \nabla \mathbf{v}_i^{(1)},
+\label{linmass}
+\enea
+where $c_T^{(1)}$ is linearization of (\ref{cT}),
+\bgea
+\dst c_T^{(1)}  =    \dst \sum_{j=1}^{n-1} \frac{\partial c_T^{\infty}}{\partial y^j} y_j^{(1)},
+\\
+
+\dst \frac{\partial c_T^{\infty}}{\partial y^j} = -\frac{1}{\lb c_T^{\infty}\rb^2}  \sum_{i=1}^{n} \lb \lb  \bar{V}_i^{\infty} - \bar{V}_n^{\infty} \rb  \delta_{ij} + \sum_{j=1}^{n-1}  \frac{ y_i^{\infty}\partial  \bar{V}_i^{\infty} }{\partial  y_j}\rb
+
+\enea
+Differentiating (\ref{linStefMax}) and eliminating $\nabla \mathbf{v}$ from (\ref{linmass}) yields
+\bgea
+ \dst\dst \sum_{j=1}^{n-1} R_{ij} \frac{\partial  y_j^{(1)}}{\partial t}= - \sum_{j=1}^{n-1} Q_{ij} \Delta y_j^{(1)}. 
+ \label{eq:y1}
+\enea
+where 
+\bgea
+\dst R_{ij} = \lb \frac{ y_i^{\infty}}{D_{ij}} - \frac{ y_i^{\infty}}{D_{in}} \rb \lb 1-\delta_{ij}\rb  - \lb \frac{ y_i^{\infty}}{D_{in}} + \sum_{k\neq i,k\neq n} \frac{ y_i^{\infty}}{D_{ik}}   \rb  \delta_{ij}
+\enea
+For Onsager symmetry and decay of solutions of (\ref{eq:y1}) see \cite{mwn2015}.
+
+\subsection{Relation to molecular dynamics}
+In molecular dynamics, instantaneous molar densities are sums of delta functions, but their Fourier transforms are smooth functions, with products of such making sense
+\bgea
+c_i (\mathbf{x},t) = \dst \sum_{a_i} \delta (\mathbf{x}- \mathbf{x}_{a_i}(t), \quad \mathbf{x}_{a_i}(t)  \stackrel{\mbox{\tiny MD flow}}{=}   T_t   \mathbf{x}_{a_i}(t) ;
+\\
+\hat{c}_i (\mathbf{k},t) =  \sum_{a_i} \exp \lb \imath \mathbf{k} \mathbf{x}_{a_i}(t) \rb , \mathbf{k} = \lb  \frac{2 \pi n_1}{L_1},  \frac{2 \pi n_2}{L_2}, \frac{2 \pi n_3}{L_3} \rb.
+
+\enea
+Since in equilibrium ensemble $x$ is uniformly distributed in the computational box and  $\lt \exp \lb \imath \mathbf{k} \mathbf{x} \rb \rt=0.$ 
+As for autocorrelation functions, 
+\bgea
+\mathcal{C}_{ij}(\mathbf{k},t )= \lt \hat{c}_i (\mathbf{k},t)  \hat{\bar{c}}_i (\mathbf{k},0) \rt = \dst\sum_{a_i,b_j} \lt \ e^{  \imath \mathbf{k} \lb  \mathbf{x}_{a_i}(t)-\mathbf{x}_{b_j}(0) \rb  }\ \  \rt
+\enea 
+Assuming that, in statistical sense, deviations of $c$ from the equilibrium values are small, we take it that 
+\bgea
+\dst y_i^{(1)} = \frac{c_i^{(1)} c_T^{\infty }- c_i^{\infty }c_T^{(1)}}{\lb c_T^{\infty }\rb^2},
+\enea
+and autocorrelation function of $y$ is computed from autocorrelation function of $c$:
+\bgea
+\mathcal{Y}_{ij}(\mathbf{k},t )= \lb W \mathcal{C} W^T \rb_{ij},
+\enea 
+where $W$ is a linear transformation from $c^{(1)}$ to $y^{(1)}:$ 
+\bgea
+y_i^{(1)} = \sum_{j=1}^{n-1} W_{ij}c_j^{(1)}  , 
+\\
+W  = \frac{1}{c_T^\infty }\cdot  \lb \delta_{ij} + y_i^{\infty } \frac{\partial  \log  c_T^\infty}{\partial y_j} \rb^{(-1)},
+\enea
+(where $M^(-1)$ is matrix inverse of M).
+
+Autocorrelations $\mathcal{Y}$ , by Onsager hypothesis, satisfy continuum modeling equations, 
+\bgea
+R \frac{\partial }{\partial t} \mathcal{Y} = k^2 Q \mathcal{Y}
+\enea
+This is a constant coefficients ODE,  with $t\rightarrow 0$ limit determined by thermodynamic factors, the activities coefficients. Those ODE's can be solved by diagonalizing the matrices, with the rate of decay determined by eigenvalues of $k^2 R^{-1} Q.$ Those eigenvalues in turn can be expressed via relative diffusion coefficients and thermodynamics factors appearing in $Q$ and $R.$ Using those relations, one can find relative diffusion coefficients and activities. See \cite{mwn2015} for details.
+
+
+
+
+\begin{thebibliography}{28}
+\bibitem{mwn2006} Monroe,  Wheeler, Newman (2006)
+\bibitem{mwn2009}  Monroe,  Wheeler, Newman (2009)
+\bibitem{mwn2015} Monroe,  Wheeler, Newman (2015)
+\bibitem{GoyalMonroe} Goyal, Monroe (2017)
+\end{thebibliography}
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+give rise to the following equations for autocorrelation functions of m-th Fourier transforms $\lbr \al_{im} \rbr$ of  the mole fractions $\lbr y_i \rbr$ of species $i=1,2,\ldots n$ (note that since $\sum y_i =1$, only $n-1$ of those quantities are independent, and $n-1$ equations only are required):
+
+\bgea
+\dst \frac{\partial c_i^{(1)}}{\partial t} = -  c_i^{(0)} \nabla \mathbf{v}_i^{(1)} ,
+\\
+\dst\sum_i \bar{V}_i^{(0)} \frac{\partial c_i^{(1)}}{\partial t}  = -  \sum_i c_i^{(0)}  \frac{\partial \bar{V}^{(1)}}{\partial t} =  \sum_{ij}
+\lb c_i^{(0)}  \frac{\partial \bar{V}^{(0)}}{\partial y_j}\rb
+\frac{\partial y_j^{(1)}}{\partial t} (=0 , dP=dT=0)?
+\\
+=   \bar{V}_i c_i^{(0)} \nabla \mathbf{v}_i^{(1)}
+\enea
+
+We note that in \cite{mwn2006}-\cite{mwn2015}, linearized equations are written for molar fractions,
+
+\bgea
+\dst y_i^{(1)} = \frac{c_i^{(1)} c_T^{(0)}- c_i^{(0)}c_T^{(1)}}{\lb c_T^{(0)}\rb^2}
+\enea
+
+\bgea
+\dst\sum_{j \neq n} Q_{ij} \al_{jm} = \sum_{j \neq n} R_{ij} \frac{d \al_{jm}}{d\tau},
+\enea
+where matrices $Q$, $R$ depend on relative diffusion coefficients and the equilibrium molar concentrations and activities, according to the formula:
+
+
+
+Onsager hypothesis implies that autocorrelation functions $C$ of fluctuating concentrations satisfy the same equations:
+
+\bgea
+\dst\sum_{j \neq n} Q_{ij} C = \sum_{j \neq n} R_{ij} \frac{d C }{d\tau},
+\enea
+
+Manipulating those equations appropriately enables us to compute relative diffusion coefficients and thermodynamic activities.
+
+In more detail:
+
+(to be typed).
+
+\bgea
+\lt\dst\sum_{jk} \exp \lb i X_j^{s} (t) \rb \exp \lb  i X_k^{s} (0)\rb \rt,
+
+\\
+
+X_j^{s} (t) = T_t X_j^{s} (0) = \exp t \lbr H \rbr  X_j^{s} (0)
+
+\enea
+
+\section{Appendix 1: Continuum model equations, after Goyal-Monroe}
+Needs to be polished and go to appendix of continuum modeling, or alternatively assembled by referencing published papers
+
+\subsection{Thermodynamics}
+In the Goyal-Monroe approach, developments of the theory is based on the Gibbs free energy, which depends smoothly on variables "under our control" in the lab: temperature $T$, pressure $p$, stress tensor $\tau$, species numbers (composition) $\mathbf{n} = \lb  n_1, n_2, \ldots n_s \rb $, while the other physical quantities of interest are defined as the conjugate variables (respectively, entropy $S$, volume $V$, strain tensor $D$, , chemical potentials $\mu_i$):
+\bgea
+G= G(T, p, \bm{\tau}, \mathbf{n} ) (= U + p V - T S);
+\\
+d G = - S dT +V dp + \mathbf{D} d \bm{\tau} + \dst\sum_i \mu_i dn_i,
+\label{dG}
+\enea
+where $S= S (T, p, \bm{\tau}, \mathbf{n} $, etc.  As mixed second partial derivatives can be taken in any order, there are certain relations between partial derivatives of the conjugate variables, called Maxwell relations.
+
+Another main assumption is that Gibbs free energy is extensive with respect to composition (or, put differently, a homogeneous function of degree 1)
+\bgea
+G(T, p, \bm{\tau}, \la \mathbf{n} ) =  \la G(T, p, \bm{\tau}, \mathbf{n} )
+\enea
+If we differentiate the above relation with respect to $\la$ and then set $\la$ to be 1, we obtain the following relation:
+\bgea
+\dst\sum n_i \mu_i = G(T, p, \bm{\tau}, \mathbf{n} ),
+\label{G mu n}
+\enea
+so $G = \dst\sum n_i \mu_i.$ Substituting (\ref{G mu n}) into (\ref{dG}) , we get:
+\bgea
+\dst\sum_i  n_i d \mu_i = - S dT +V dp + \mathbf{D} d \bm{\tau},
+\enea
+which is one of the relations between our thermodynamic quantities which go under the name of Gibbs-Dulem relations.
+
+This relation states that sum overs species of certain quantities equals zero. The same is true for internal forces acting different species, in species momentum balance equations. In fact one of the assumptions in \cite{Goyal_Monroe} (which is independent of other assumptions in the theory), is that essentially those two can be identified (up to an appropriate overall scaling, and with $d$ replaced by $\nabla$, the differentiation over the spatial variables, for a system described by {\em local} (in space and time)  thermodynamic variables.
+
+We can keep playing such game some more. Differentiating $S$, and giving the corresponding partial derivatives names borrowed from the linear response theory, we have:
+\bgea
+d S =  \frac{C_p}{T} dT - V \al_V dp - V \al_{\mathbf{D}} d \bm{\tau} + \sum \bar{S}_i d n_i,
+\label{dS}
+\enea
+where $\bar{S}_i$  can be called reduced entropies. But since $G$ is extensive with respect to composition, so is $S$, and by the same reasoning we have:
+\bgea
+S = \sum_i \bar{S}_i n_i
+\enea
+Substituting this into (\ref{dS}), we get another Gibbs -Dulem relation:
+\bgea
+\sum_i n_i d\bar{S}_i = \frac{C_p}{T} dT - V \al_V dp - V \al_{\mathbf{D}} d \bm{\tau}
+\enea
+
+By a similar computation for the volume,
+\bgea
+\dst\sum_i   n_i d \bar{V}_i = \lb V \al_V \rb dT - \frac{V}{K} dp ;
+\label{dV}
+\enea
+see discussion in  \cite{GoyalMonroe} on why the $d \bm{\tau}$ term is absent for the volume, and only pressure term, i.e. the trace of the stress tensor, contributes. This Gibbs-Dulem relation for partial volume can be thought as an equation of state in disguise; indeed, in thermodynamics we cannot independently assign temperature, pressure, and volume--as those are related by an equation of state.
+
+
+
+
+\subsection{A simple transport model: isothermic, isobaric binary electrolyte}
+(Outline, details/notations to be fixed):
+
+\bgea
+\dst\frac{\partial (c_T y_i)}{\partial t} = - div \mathbf{N}_i, \quad  \mathbf{N}_i = c_T y_i \mathbf{v}_i
+\enea
+We have three fluxes here, for $+,-$, and $0$ electrolyte components. But two of those fluxes can be eliminated by using the equation of state, \ref{dV}, and charge conservation--at least in the one dimensional geometry:
+\bgea
+v^{\boxdot} = \dst\sum_i \bar{V}_i  \mathbf{N}_i = \dst\sum_i \phi_i \mathbf{v}_i , \quad \dst\sum_i \phi_i = 1
+\enea
+\bgea
+- div\  v^{\boxdot} + \dst\sum_i \mathbf{N}_i \cdot \nabla \bar{V}_i = \dst\sum_i \bar{V}_i \frac{\partial (c_T y_i)}{\partial t} =  \frac{1}{K} \frac{\partial p}{\partial t} -\al_V \frac{\partial T}{\partial t}
+\enea
+\bgea
+\rho_e =  c_T \dst\sum_j z_j y_j (=0)   ; \quad \mathbf{i} = \dst\sum_j z_j \mathbf{N}_j
+\\
+\dst\frac{\partial \rho_e  }{\partial t} = - div \  i (=0).
+\enea
+There is one flux yet to be determined. To do so, we turn to the constituitive relations, the Stephan-Maxwell relations,
+
+(we note that in more complicated models, those will be modified by using the entropy production formula)
+
+\bgea
+-c_T y_i \nabla \mu_i = \dst\sum_{j\neq i}^{3} \frac{R T}{D_{ij}} \lb y_j \mathbf{N}_i - y_i \mathbf{N}_j \rb
+\\
+\ \ \mbox{\small $-c_T y_0 \nabla \mu_0 =\dst\sum_{j= \pm}\frac{R T}{D_{0j}} \lb y_j \mathbf{N}_0 - y_0 \mathbf{N}_j \rb = \nu R T \chi \nabla y, \chi = 1 +\frac{\partial \ln \la_0}{\partial \ln y_0} $}
+\enea
+We need to use only one of those relations for the missing flux, and the one with $\mu_0$ is the most convenient to use, as it is not affected by the applied electric field. With this (+equation of state, + charge conservation) we can find all the fluxes by manipulating with those linear equations. The result are formulas familiar from Neuman model of electrolytes:
+
+\bgea
+\mathbf{N}_{\pm} = -\nu_{\pm} D \bar{V}_0 c_T^2 \chi \nabla y + \frac{t_{\pm} \mathbf{i}}{F z_{\pm}} + \nu_+ c_T y \lb \mathbf{v}^{\square} - \frac{ Q \mathbf{i}}{F} \rb ,
+\\
+\mathbf{N}_{0}  = D \bar{V}_e c_T^2 \chi \nabla y - c_T y_0 \frac{ Q \mathbf{i}}{F}
+\\
+D = \frac{(z_+ - z_-) D_{0+} D_{0-}}{ z_+ D_{0+} - z_- D_{0-} }, t_+ = (1-t_-) = \frac{ z_+ D_{0+} }{ z_+ D_{0+} - z_- D_{0-} },
+\\
+Q = \frac{\bar{V}_+ t_+}{z_+} + \frac{\bar{V}_- t_-}{z_-} (=0).
+\enea
+
+\bgea
+\dst\frac{\partial (c_T y_{\pm,0})}{\partial t} + \nabla \lb \mathbf{v}^{\square} c_T y \rb = \nabla \lb D \chi \bar{V}_0 c_T^2 \nabla y  \rb - \frac{\mathbf{i} \nabla t_+}{F z_{+} \nu_+},
+\\
+\nabla \mathbf{v}^{\square} = - \frac{\bar{V}_e \mathbf{i} \nabla t_+}{ F z_+ \nu_+} - \frac{D c_T \chi}{1- \nu y } \nabla y \cdot \nabla \bar{V}_e
+\enea
+
+\bgea
+\nabla \frac{\mu_+}{F z_+} = - \frac{ \mathbf{i}}{\kappa} +\frac{\nu R T t_- \chi}{F z_+ \nu_+}  \nabla \ln y,
+\\
+\frac{1}{\kappa} = \frac{R T\nu_+ \nu_- }{(F z_+ \nu_+)^2 c_T y }\lb \frac{y}{D_{+-}} + \frac{y_0}{\nu_- D_{0+} +  \nu_+ D_{0-}}\rb
+\enea
+
+
+
+
+
+
+
+
+
+\lb  \bar{V}_i^{\infty} y_i^{(1)} + \sum_{j=1}^{n-1}  \frac{ y_i^{\infty}\partial  \bar{V}_i^{\infty} }{\partial  y_j}  y_j^{(1)}\rb 

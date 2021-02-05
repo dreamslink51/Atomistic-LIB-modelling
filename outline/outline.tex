@@ -1,0 +1,114 @@
+\documentclass{article}
+\newcommand{\re}[1]{\textcolor{red}{#1}}
+\newcommand{\ma}[1]{\textcolor{magenta}{#1}}
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\gr}[1]{\textcolor{green}{#1}}
+\newcommand{\vi}[1]{\textcolor{violet}{#1}}
+\newcommand{\te}[1]{\textcolor{teal}{#1}}
+\newcommand{\ol}[1]{\textcolor{olive}{#1}} % gold
+\newcommand{\cy}[1]{\textcolor{cyan}{#1}}
+
+\usepackage[utf8]{inputenc} %Standard encoding
+\usepackage{amsmath} % Math symbols
+\usepackage{amssymb} % Math symbols
+\usepackage{microtype} % Improves formatting
+\usepackage{graphicx} % Allows png images
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[style=numeric-comp, sorting=none, backend=biber, doi=false, isbn=false]{biblatex}
+\usepackage{xcolor,latexsym,epsfig,amssymb,amsmath,color,subcaption,pictex,amsfonts,multicol}
+\usepackage{tocloft}
+
+\addbibresource{outline.bib}
+
+\include{preamble}
+\title{\textbf{Review Paper Outline} \\ Review: Pushing the Boundaries of Atomistic Methods to Compute Properties of Lithium Batteries with an Outlook to Experiment and Continuum Modelling}
+\author{Lucy M. Morgan/Michael P. Mercer, Arihant Bhandari, Chao Peng,\\ Mazharul M. Islam, Hui Yang, Maxim Zyskin, Aron Walsh, Benjamin J. Morgan,\\ Denis Kramer, Saiful M. Islam, Harry E. Hoster, Charles W. Monroe,\\ Jacqueline Edge*, Chris-Kriton Skylaris*}
+
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Working Abstract}
+The commercialisation of the lithium ion (Li-ion) battery in 1991 has enabled a technological revolution in portable electronics, electric vehicles, and potentially stationary storage. Atomistic modelling techniques across length-scales can be used to compute observable properties of Li-ion cells, enabling predictions of those properties which can be compared with experiments. Here, we review recent work utilising atomistic modelling techniques spanning different length and time scales: Density Functional Theory (DFT), classical and ab-initio Molecular Dynamics (MD), lattice gas Monte Carlo (MC). We also provide an overview of recent method development that enables the computation of not only bulk, but also surface and interfacial, properties. We demonstrate the strengths of those techniques for determining important properties in the cathode, electrolyte, and anode. We highlight select bulk properties of importance for bridging the gap between atomistic and continuum scales. We review important recent results for computing properties at the anode-electrolyte and cathode-electrolyte interfaces, and as an outlook, call attention to some important considerations for modelling interfaces. The overall aim of this review is to showcase the state-of-the-art atomistic methods used spanning across length/time scales, to show how these can be linked to experiments and continuum models, and to highlight their overall importance for the prediction of technologically important Li-ion battery behaviour.
+
+\section*{Summary of the Approach}
+%A brief summary (roughly 500 words) detailing the intended approach to be used in the article
+We first summarise the overall motivation of this review: (i) to demonstrate the value of atomistic methods for predicting observable properties of Li-ion batteries (ii) to distil that information in a form that can be picked up by a broad audience, such as battery engineers. We then summarise some key reviews in this field and the overall motivation, the current state of the art, and the novel approaches and outputs of this particular review. Next, we outline atomistic methods: (i) summarising the basic theory behind modelling techniques (DFT, cluster expansion, Lattice gas and Monte Carlo, and Classical Molecular Dynamics), (ii) calculating some of the most technologically important observable properties, and (iii) introducing the development of new techniques that are recent and ongoing outputs of the Faraday Institution. The following sections will focus on anodes, electrolytes, and cathodes. For each of the electrode sections, we discuss properties affecting both bulk and surfaces/interfacial regions of materials. The emphasis is in terms of obtaining and predicting measurable properties of current commercially important Li-ion battery materials, rather than state-of-the-art materials discovery. The electrolyte section will be split into (i) liquid electrolytes and (ii) solid electrolytes. In each of these sections we compare and discuss how the calculated properties are reflected in experimental observations and measurements, and on the wider importance of these properties for modelling on different length and time scales. The final section discusses the broader outlook, where we will further elucidate the links between atomistic models, experiments, and continuum modelling, discuss further developments in atomistic methods for batteries, and dissect the areas which pose most challenging for continuing study.
+
+\section*{Estimated Date of Delivery: January 2021} 
+%An estimated date of manuscript delivery if more or less than 6 months
+
+\section*{Importance and Context}
+%A brief statement outlining why a review on this topic is important and how it will fit into the existing literature
+Atomistic methods on different length scales have transformed our understanding of how Li-ion cells operate, leading to quantitative predictions with physical underpinnings comparable with experiment. We highlight early work that allows a bridge between atomistic length scales and continuum modelling techniques, along with completed and ongoing method development in that area. We show that although bulk electrode properties are generally well understood and described, there are nevertheless a few important select properties that remain challenging to compute or interpret such as: diffusion coefficients, entropy coefficients, explaining layered stacking sequence changes, and hysteresis effects. These properties have not received as much attention thus far and are necessary to bridge modelling length scales. Our review highlights ongoing atomistic modelling work at the electrode-electrolyte interface, leading to new insights at both the solid and electrolyte sides of the interface. Specific research directions at the anode-electrolyte interface are included in our review that have not previously been described. We also present, as an outlook, technologically important challenges at the cathode-electrolyte interface. The importance of the review is: (i) to demonstrate the unique insights provided by atomistic methods and how they can be used for predicting observable properties of Li-ion batteries, (ii) to highlight completed and ongoing atomistic method development that has the potential to bridge to continuum length scales, and (iii) to distil that information in a form that can be picked up by a broad audience, such as battery engineers.
+
+\section*{Recent Related Reviews}
+% A reference list of related review articles published within the last five years
+
+The authors have carried out a thorough literature search and found only one review within the last five years which covers similar topical information. The review by \textcite{van_der_ven_rechargeable_2020} in 2020 has a stronger focus on computational methods and theory with a section on application of techniques on materials. The review we pose here differs a) in terms of computational methods, alongside an overview of atomistic techniques, we detail these methods in terms of calculating specific observable properties and highlight new methods and their impact currently under development within the Faraday Institution. b) although considerations for different materials is discussed (where appropriate), our review is focused towards properties as opposed to materials. In fact, the review by \textcite{van_der_ven_rechargeable_2020} emphasises as an outlook the fact that electrode-electrolyte interfaces are poorly understood; we plan to highlight work done within the Faraday Institution to understand properties of the interface.
+
+There are several reviews which are adjacently related to the review proposed here. \textcite{wang_reviving_2018} in 2018 reviewed LiCoO$_2$ with a reflection towards higher energy density. This review was experimental focused, tailoring the battery components for LiCoO$_2$. In 2017 \textcite{parfitt_diffusion_2017} reviewed the diffusion in energy materials, both in solid oxide fuel cells and batteries, with some focus on material structure. \textcite{zhang_chemomechanical_2017} reviewed degradation in Li-ion batteries with a focus on continuum modelling techniques. \textcite{canepa_computational_2017} reviewed atomistic modelling techniques, in particular diffusion barriers and defect chemistry, for a range of multivalent cathode materials, but was very much focused on that class of materials. \textcite{xu_electrochemomechanics_2016} in 2016 reviewed the influence of stress on electrodes in Li-ion batteries. This review covers some atomistic methods, extending into continuum modelling. An additional review in 2016 by \textcite{urban_computational_2016} focused mainly on DFT methods and covered a select range of properties.
+
+Atomistic methods can be used to obtain information on a range observable properties, and there is a need to put that information into a single coherent review, updated with recent work from within the Faraday Institution.
+
+%\bibliographystyle{ieeetr}
+\printbibliography[heading=none]
+
+\renewcommand\contentsname{Working Table of Contents}
+\tableofcontents
+%A list of contents and subheadings to ensure the article covers the subject comprehensively
+
+%  Makes sure the sections aren't printing in the document, only TOC
+\phantomsection
+
+% This are to remove the page numbering of the sections
+\addtocontents{toc}{\cftpagenumbersoff{section}}
+\addtocontents{toc}{\cftpagenumbersoff{subsection}}
+\addtocontents{toc}{\cftpagenumbersoff{subsubsection}}
+
+% Introduction section
+\addcontentsline{toc}{section}{Introduction}
+
+% Methods section
+\addcontentsline{toc}{section}{Methods}
+% Methods overview subsection
+\addcontentsline{toc}{subsection}{Method Overview}
+\addcontentsline{toc}{subsubsection}{Quantum Mechanical Methods based on Density Functional Theory}
+\addcontentsline{toc}{subsubsection}{Cluster Expansion}
+\addcontentsline{toc}{subsubsection}{Lattice Gas and Monte Carlo}
+\addcontentsline{toc}{subsubsection}{Classical Molecular Dynamics (MD)}
+% Calculating observable properties subsection
+\addcontentsline{toc}{subsection}{Calculating Observable Properties}
+\addcontentsline{toc}{subsubsection}{Diffusion Coefficients}
+\addcontentsline{toc}{subsubsection}{Equilibrium Voltage}
+\addcontentsline{toc}{subsubsection}{Electric Conductivity}
+\addcontentsline{toc}{subsubsection}{Thermodynamic Enhancement Factors}
+% Method Development subsection
+\addcontentsline{toc}{subsection}{Method Development}
+\addcontentsline{toc}{subsubsection}{Continuum Models of Electrolyte Solutions within Density Functional Theory}
+\addcontentsline{toc}{subsubsection}{Extracting Stefan-Maxwell Diffusivities from MD, and Onsager-Casimir Decay of Fluctuations Hypothesis}
+\addcontentsline{toc}{subsubsection}{Fitting Potentials for Classical Molecular Dynamics}
+
+% Anodes section
+\addcontentsline{toc}{section}{Anodes}
+\addcontentsline{toc}{subsection}{Bulk Properties}
+\addcontentsline{toc}{subsection}{Surfaces and Interfaces}
+
+% Electrolytes section
+\addcontentsline{toc}{section}{Electrolytes}
+\addcontentsline{toc}{subsection}{Liquid Electrolytes}
+\addcontentsline{toc}{subsection}{Solid Electrolytes}
+
+% Cathodes section
+\addcontentsline{toc}{section}{Cathodes}
+\addcontentsline{toc}{subsection}{Bulk Properties}
+\addcontentsline{toc}{subsection}{Surfaces and Interfaces}
+
+\addcontentsline{toc}{section}{Outlook}
+\addcontentsline{toc}{subsection}{Further Developments in Atomistic Methods of Batteries}
+\addcontentsline{toc}{subsection}{Linking Atomistic Modelling to Continuum Models and Experiment}
+\addcontentsline{toc}{subsection}{Current and Future Challenges}
+
+\end{document}

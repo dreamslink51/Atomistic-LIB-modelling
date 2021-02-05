@@ -1,0 +1,103 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{Introduction}
+\label{sec:intro}
+
+% Mike to add a slightly more detailed breakdown ahead of 19th January 2021.
+
+% Key audiences to reach:
+
+% We will try to reach a somewhat wider group of people here in the introduction
+
+% Note: these parts above are on the intended audience, based on an earlier discussion between Mike, Lucy, Chris and Jacqueline
+
+Mathematicians \& continuum modellers new to batteries - yes, we want to introduce them to the concepts applicable to batteries. Reach in intro and conclusions, but not the main body.
+
+DFT users: already plenty of reviews out there. But there are other atomistic modellers we can reach:
+
+a) DFT developers
+b) Applying DFT to modellers on other length scales – we have already made this link in several places
+c) Atomistic models other than DFT: Monte carlo, MD, etc.
+
+All of these have not been covered so much in other reviews.
+Additionally, not all in one place. We reference a lot of other specific reviews. I’m wondering if adding an appendix with a list highlighting other recent reviews we think are prevalent in specific areas. Sort of a go-to guide. i.e.  “for more on DFT of cathode materials, see reviews A, B, and C” type thing.
+
+> 4, Battery modellers at other scales - yes, these are our primary target. 
+
+Clarified above that “atomistic” can be broken down into different sub-length scales.
+
+- two different continuum scales: reach in outlook and highlight the link between atomistic-continuum.
+- 1. obtainable for linear scaling DFT, Poisson-Boltzmann approach
+- 2. classical (Newman) approach
+Like atomistic (DFT, classical), continuum also has different scales. In liquid electrolytes, Arihant’s section reaches the lower lengths, and maxim’s reaches the longer lengths.
+Link to control modellers (atomistic $\to$ control) is made in the anodes section already. Make point in the anodes breakdown in introduction.
+These links should be made stronger in the text, but also discussed as a point in the overall outlook.
+
+> 5. Other battery experts - yes, these are our target. Like 3, could be broken down as (not exhaustively):
+
+- Battery experimentalists in materials development – most of the other Faraday projects
+- Theorists in materials discovery
+- Electrochemical engineers – Greg, Dave Howey etc.
+
+> 6. Scientists new to batteries (the "battery curious") - yes, we want to give them a rough impression of the field and its importance. Reach in intro and conclusions but don’t try to cater in main text
+My comment for 3 could also cater to these, without adding rephrasing the main text, and without too much additional work.
+
+\textbf{Who to highlight where}
+
+\textbf{Introduction}: 
+introduce 6. newcomers to batteries and/or atomistic modellers (e.g. new PhD students, postdocs switching fields, etc.), preach to 3a-c, one/two sentences link with experiment and continuum models.
+Adding an additional point Mike made: “In the introduction we can provide a breakdown of the review structure, highlighting there who we think might be interested in each of the main sections”
+
+
+\textbf{Main text}: 
+- Audience will necessarily differ in each subsection – but we can clearly signpost in the introduction which part is relevant to whom so that the right people can find the relevant bits.
+Important, as the majority of readers will not read the whole review.
+
+\textbf{Outlook}: 
+mirrors the introduction in terms of audience: will be broken down into 5-6 bullets as outstanding challenges.
+One of these will be the link to the different continuum and control models. Link to experiment might need to be a separate point.
+
+
+*************************
+
+
+
+  Lithium-ion (Li-ion) batteries were first commercialised by Sony in 1991 and have therefore been on the market for nearly 30 years. They are ubiquitous in portable electronic devices, are emerging in hybrid and all-electric vehicles, and could potentially play a role in stationary storage. Despite having been available for such a long duration, not all factors dictating their capacity, rate performance, safety and longevity are completely understood. The grand challenge is to construct a multiscale model, incorporating inputs across length and time scales, that can not only describe, but also predict, changes in behaviour.
+  
+ A physical underpinning to battery models is required, since the complexity of battery systems makes it time consuming and impractical to directly measure all of their physical attributes. Physically correct descriptions of thermodynamic and kinetic battery behaviour are needed to build a predictive modelling framework. In contrast, more empirical models, which may have a limited physical basis, or no physical basis at all, generally require measuring parameters and curve fitting. One example with a limited physical basis is the Doyle-Fuller-Newman (DFN) model, which requires INSERT NUMBER HERE empirically determined input parameters REFS specific to that particular cell. Another without a physical basis is an equivalent circuit model (c.f. parameterisation and continuum reviews in the same special issue). Atomistic models are the foundational part of the multiscale modelling chain that can lead to more robust and predictive models.
+ 
+Determining parameters is not the only value of atomistic models. These models can be used to predict new behaviour not currently accessible by experiment, for reasons of cost, safety or throughput. They can also be used to optimise experimental design and use resources more efficiently, determining whether particular experiments are even worth performing. Models are useful to quantify and evaluate trends in experimental data, explaining structure-property relationships, and inform materials design strategies and libraries. Atomistic models are not just a research tool, but can be the basis of physics-based models which can accurately predict battery behaviour. Also for rapid prototyping through design - accuracy is key.
+
+This review is of interest to the following groups. Atomistic models themselves comprise a range of different length and time scales, from the level of electronic structure calculations through conventional and linear scaling density functional theory (DFT), to longer length scales like ab initio and classical molecular dynamics (MD), grand canonical Monte Carlo (MC) and kinetic Monte Carlo (kMC). These techniques, along with some recent method developments, are summarised in the methods section, ~\ref{sec:methods}. Specific applications to anodes, electrolytes and cathodes are broken down in the following sections. Links between different methodologies are emphasised, and thus this review may be of particular interest to those looking, for example, to link DFT calculations to Monte Carlo calculations, or apply linear scaling DFT to MD, bridging possible gaps in nomenclature at different length scales.
+
+The anodes section, section~\ref{sec:methods} heavily focusses on graphite, the predominant anode material in virtually every Li-ion cell. The section describes atomistic modelling in the bulk, the graphite edges where initial Li-ion insertion occurs, and the solid-electrolye interphase (SEI). EXPAND ON AUDIENCE ETC
+
+The electrolytes section (delegate Arihant/Chris, maybe Lucy to have first go at solid electrolytes)
+
+The cathodes section (delegate Lucy for first draft, other cathodes people to contribute too)
+
+\begin{itemize}
+    \item Ways in which atomistic results can be fed into higher scales. Where atomistic models fail and need input from other length scales. (Touch on parameterisation from experiment as well, maybe a sentence referencing the parameterisation review?)
+    \item \textbf{} Description of Li-ion battery, (+schematic high level diagram) - possibly general alkali-ion battery. Solid state electrolyte battery as separate figure.
+%    \item Review of literature, especially other reviews. There is a recent review by Anton Van der Ven and other big names, and another in 2019 so it would be good to check we aren't overlapping with these too. Some earlier reviews to read: \citet[2001]{VanderVen2001}, \citet[2017]{VanderVen2017}, and \citet[2020]{VanderVen2020}
+    \item objective, relevance, novelty or importance of the current review.
+    \item Description of the outline
+        \begin{itemize}
+           \item Description of methods
+           \item Anodes: for a recent overview 
+           \item Electrolytes
+           \item Cathodes
+           \item Outlook
+        \end{itemize}
+\end{itemize}
+
+
+
+
+
+
+% Batteries can be simply defined as an electrochemical power source that converts chemical energy to electrical energy. Originally, this electrochemical reaction was irreversible, and therefore the battery could only discharge once, and not be recharged. These were known as ``primary'' batteries and were commercialised around 30 years ago. Some of the best examples of these consisted of zinc and copper electrodes (Daniell element), \cite{daniel2014cathode} carbon-zinc batteries, \cite{linden2002handbook} and zinc-air batteries. \cite{li2013advanced} ``Secondary'' batteries are where the electrochemical reaction is reversible, and therefore rechargeable for repeated use. Some examples of secondary batteries are lead-acid batteries, nickel-cadmium batteries, and lithium-ion batteries (LIBs). \cite{linden2002handbook} Lead-acid batteries were invented by Plant\'{e} in 1859 and are widely determined to be the first rechargeable batteries, with a specific power of 180 W/kg and an efficiency of 60-90 \%. Even though the material and production cost was low, their working temperature was limited, with the electrolyte freezing at winter temperatures. Since this time, a wide range of battery materials have been explored, increasing the specific capacity, working temperature range, and improving weight and toxicity limitations and concerns. In 1976, Whittingham proposed the first battery that was termed lithium-ion, consisting of titanium(IV) sulfide and lithium metal, \cite{whittingham1976electrical} with a graphite anode and oxide cathode LIB proposed later in the same year by Besenhard. \cite{besenhard1976electrochemical} LIBs became more promising in 1979 when Goodenough and Mizushima successfully showed LiCoO$_2$ as a cathode, highlighting that an anode material other than lithium metal could be used. \cite{mizushima1980lixcoo2} LIBs can now reach specific powers of 250-340 W/kg, with an efficiency of 90 \%, thus making LIBs the most efficient rechargeable battery in portable electronics. \cite{whittingham2008materials}
+
+\end{document}

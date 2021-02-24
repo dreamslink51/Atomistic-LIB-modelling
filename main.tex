@@ -6,8 +6,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
 \usepackage{color, xcolor}
-% \usepackage[textsize=footnotesize,
-%             colorinlistoftodos]{todonotes} % allows adding notes and comments to document
 \usepackage{amssymb, amsthm, amsfonts}
 \usepackage{multirow}
 \usepackage{esint}
@@ -19,66 +17,11 @@
 %% Place any additional macros here.  Please use \newcommand*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand*\mycommand[1]{\texttt{\emph{#1}}}
-\newcommand*{\onetep}{\textsc{onetep}}
-\newcommand*{\conquest}{\textsc{conquest}}
-\newcommand*{\bigdft}{\textsc{bigdft}}
-\newcommand*{\castep}{\textsc{castep}}
-\newcommand*{\psifour}{\textsc{PSI4}}
-\newcommand*{\dlmg}{\textsc{dl\_mg}}
-\newcommand{\bvec}[1]{\mathbf{#1}}
-\newcommand*{\rvec}{\bvec{r}}
-\newcommand*{\Rvec}{\bvec{R}}
-\newcommand*{\rprimevec}{\bvec{r'}}
-\newcommand*{\ofrvec}{\!\left(\rvec\right)}
-\newcommand*{\ofrprimevec}{\!\left(\rprimevec\right)}
-\newcommand*{\drvec}{\mathrm{d}\rvec}
-\newcommand*{\drprimevec}{\mathrm{d}\rprimevec}
-\newcommand*{\ngwf}{\phi}
-\newcommand*{\dens}{\rho}
-\newcommand*{\denstot}{\dens_{\textrm{tot}}}
-\newcommand*{\densnuc}{\dens_{\textrm{nuc}}}
-\newcommand*{\denselec}{\dens_{\textrm{e}}}
-\newcommand*{\denselecvac}{\dens_{\textrm{e}}^{\textrm{vac}}}
-\newcommand*{\densmob}{\dens_{\textrm{mob}}}
-\newcommand*{\denseleciso}{\denselec^{0}}
+\newcommand*{\ofrvec}{\!\left(\mathbf{r}\right)}
 \newcommand*{\ci}{c_i}
-\newcommand*{\cj}{c_j}
-\newcommand*{\cik}{c^\circ}
-\newcommand*{\cbi}{c_i^{\rm bulk}}
-\newcommand*{\cbj}{c_j^{\rm bulk}}
 \newcommand*{\cif}{c_i^{\infty}}
-\newcommand*{\cjf}{c_j^{\infty}}
-\newcommand*{\acc}{\lambda}
-\newcommand*{\facc}{\acc\ofrvec}
-\newcommand*{\zi}{z_i}
-\newcommand*{\zj}{z_j}
-\newcommand*{\pot}{\nu}
 \newcommand{\veps} {\varepsilon}
-\newcommand*{\Vsteric}{V^{\textrm{steric}}}
-\newcommand*{\kb}{k_{\textrm{B}}}
-\newcommand*{\kbt}{\kb T}
-\newcommand*{\freeE}{U}
-\newcommand*{\freeEelec}{\freeE^{\textrm{elec}}}
-\newcommand*{\freeEosmo}{\freeE^{\textrm{osmo}}}
-\newcommand*{\freeEmob}{\freeE^{\textrm{mob}}}
-\newcommand*{\freeEatmo}{\freeE^{\textrm{atmo}}}
-\newcommand*{\freeEacc}{\freeE^{\textrm{acc}}}
-\newcommand*{\half}{\frac{1}{2}}
-\newcommand*{\mui}{\mu_i}
-\newcommand*{\muj}{\mu_j}
-\newcommand*{\muexi}{\mu_i^\textrm{ex}}
-\newcommand*{\muexj}{\mu_j^\textrm{ex}}
-\newcommand*{\muid}{\mu_i^\textrm{id}}
-\newcommand*{\bohr}{\!$a_0$}
-\newcommand*{\pbe}{P-BE}
-\newcommand*{\vac}{V_{\rm acc}}
-\newcommand*{\rsol}{Z_sC_s}
-
-\newcommand{\SubItem}[1]{
-    {\setlength\itemindent{15pt} \item[-] #1}
-}
-\newcommand{\re}[1]{\textcolor{red}{#1}}
-
+% \newcommand{\re}[1]{\textcolor{red}{#1}}
 
 \usepackage{blindtext}
 \usepackage{subfiles} % Best loaded last in the preamble
@@ -88,10 +31,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Pushing the boundaries of atomistic methods to compute properties of lithium batteries with an outlook to experiment and continuum modelling}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Meta-data block
-%% ---------------
 %% Each author should be given as a separate \author command.
 %% Corresponding authors should have an e-mail given after the author
 %% name as an \email command.
@@ -124,9 +64,16 @@
 \affiliation{School of Chemistry, University of Southampton, Southampton SO17 1BJ, UK}
 \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
-\author{Maxim Zyskin}
-\affiliation{Department of Engineering Science, University of Oxford, Parks Road, Oxford, OX1 3PJ, UK}
+\author{Samuel W. Coles}
+\affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
 \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+
+\author{Ryan Sharpe}
+\affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
+
+% \author{Maxim Zyskin}
+% \affiliation{Department of Engineering Science, University of Oxford, Parks Road, Oxford, OX1 3PJ, UK}
+% \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Aron Walsh}
 \affiliation{Department of Materials, Imperial College London, Exhibition Road, London SW7 2AZ, UK}
@@ -148,9 +95,9 @@
 \affiliation{Department of Chemistry, Lancaster University, Bailrigg, Lancaster, LA1 4YB, UK}
 \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
-\author{Charles W. Monroe}
-\affiliation{Department of Engineering Science, University of Oxford, Parks Road, Oxford, OX1 3PJ, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+% \author{Charles W. Monroe}
+% \affiliation{Department of Engineering Science, University of Oxford, Parks Road, Oxford, OX1 3PJ, UK}
+% \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Jacqueline Sophie Edge}
 \affiliation{Department of Mechanical Engineering, Imperial College London, London, SW7 2AZ, UK}
@@ -185,12 +132,12 @@ Michael P. Mercer: https://orcid.org/0000-0001-7578-3554 \newline
 Chao Peng: https://orcid.org/0000-0003-3099-2808 \newline
 Chris-Kriton Skylaris: https://orcid.org/0000-0003-0258-3433 \newline
 Hui Yang: https://orcid.org/0000-0002-7890-5411 \newline
-Mazharul M Islam: https://orcid.org/0000-0002-5638-8265 \newline
+Mazharul M. Islam: https://orcid.org/0000-0002-5638-8265 \newline
 Arihant Bhandari: https://orcid.org/0000-0002-2914-9402 \newline
 Jacqueline Sophie Edge: https://orcid.org/0000-0003-4643-2426 \newline
-Julian Holland:
-https://orcid.org/0000-0001-8959-0112
-
+Julian Holland: https://orcid.org/0000-0001-8959-0112 \newline
+Ryan Sharpe: https://orcid.org/0000-0002-1337-0209 \newline
+Samuel W. Coles: https://orcid.org/0000-0001-9722-5676 \newline
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The "Acknowledgement" section can be given in all manuscript
@@ -199,8 +146,9 @@ https://orcid.org/0000-0001-8959-0112
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acknowledgement}
 
-Please use ``The authors thank \ldots'' rather than ``The
-authors would like to thank \ldots''.
+The authors thank the Faraday Institution for funding through the Multi-Scale Modelling (MSM) project and Maxim Zyskin for his discussions.
+% Please use ``The authors thank \ldots'' rather than ``The
+% authors would like to thank \ldots''.
 
 
 \end{acknowledgement}

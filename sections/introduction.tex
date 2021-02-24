@@ -2,21 +2,17 @@
 
 \begin{document}
 
-\section{Introduction}
+\section{Introduction (Mike/Lucy/Julian)}
 \label{sec:intro}
 
 % Mike to add a slightly more detailed breakdown ahead of 19th January 2021.
-
 % Key audiences to reach:
-
 % We will try to reach a somewhat wider group of people here in the introduction
-
 % Note: these parts above are on the intended audience, based on an earlier discussion between Mike, Lucy, Chris and Jacqueline
 
 Mathematicians \& continuum modellers new to batteries - yes, we want to introduce them to the concepts applicable to batteries. Reach in intro and conclusions, but not the main body.
 
 DFT users: already plenty of reviews out there. But there are other atomistic modellers we can reach:
-
 a) DFT developers
 b) Applying DFT to modellers on other length scales – we have already made this link in several places
 c) Atomistic models other than DFT: Monte carlo, MD, etc.
@@ -46,37 +42,38 @@ My comment for 3 could also cater to these, without adding rephrasing the main t
 
 \textbf{Who to highlight where}
 
-\textbf{Introduction}: 
-introduce 6. newcomers to batteries and/or atomistic modellers (e.g. new PhD students, postdocs switching fields, etc.), preach to 3a-c, one/two sentences link with experiment and continuum models.
-Adding an additional point Mike made: “In the introduction we can provide a breakdown of the review structure, highlighting there who we think might be interested in each of the main sections”
+\textbf{Introduction}: focuses on introducing newcomers to batteries and/or atomistic modellers (e.g. new PhD students, postdocs switching fields, etc.), preach to DFT users (a-c), and give one/two sentences link with experiment and continuum models. We should provide a breakdown of the review structure, highlighting there who we think might be interested in each of the main sections.
+
+\textbf{Main text}: Audience will necessarily differ in each subsection but we can clearly signpost in the introduction which part is relevant to whom so that the right people can find the relevant bits. Important, as the majority of readers will not read the whole review.
+
+\textbf{Outlook}: mirrors the introduction in terms of audience and will be broken down into 5-6 bullets as outstanding challenges. One of these will be the link to the different continuum and control models. Link to experiment might need to be a separate point.
 
 
-\textbf{Main text}: 
-- Audience will necessarily differ in each subsection – but we can clearly signpost in the introduction which part is relevant to whom so that the right people can find the relevant bits.
-Important, as the majority of readers will not read the whole review.
-
-\textbf{Outlook}: 
-mirrors the introduction in terms of audience: will be broken down into 5-6 bullets as outstanding challenges.
-One of these will be the link to the different continuum and control models. Link to experiment might need to be a separate point.
-
-
-*************************
+*******************************************************************************
 
 
 
-  Lithium-ion (Li-ion) batteries were first commercialised by Sony in 1991 and have therefore been on the market for nearly 30 years. They are ubiquitous in portable electronic devices, are emerging in hybrid and all-electric vehicles, and could potentially play a role in stationary storage. Despite having been available for such a long duration, not all factors dictating their capacity, rate performance, safety and longevity are completely understood. The grand challenge is to construct a multiscale model, incorporating inputs across length and time scales, that can not only describe, but also predict, changes in behaviour.
-  
- A physical underpinning to battery models is required, since the complexity of battery systems makes it time consuming and impractical to directly measure all of their physical attributes. Physically correct descriptions of thermodynamic and kinetic battery behaviour are needed to build a predictive modelling framework. In contrast, more empirical models, which may have a limited physical basis, or no physical basis at all, generally require measuring parameters and curve fitting. One example with a limited physical basis is the Doyle-Fuller-Newman (DFN) model, which requires INSERT NUMBER HERE empirically determined input parameters REFS specific to that particular cell. Another without a physical basis is an equivalent circuit model (c.f. parameterisation and continuum reviews in the same special issue). Atomistic models are the foundational part of the multiscale modelling chain that can lead to more robust and predictive models.
+Lithium-ion (Li-ion) batteries were first commercialised by Sony in 1991 and have therefore been on the market for nearly 30 years. They are ubiquitous in portable electronic devices, are emerging in hybrid and all-electric vehicles, and could potentially play a role in stationary storage. Despite having been available for such a long duration, not all factors dictating their capacity, rate performance, safety, and longevity are completely understood. The grand challenge is to construct a multiscale model, incorporating inputs across length and time scales, that can not only describe, but also predict, changes in behaviour.
+
+A physical underpinning to battery models is required, since the complexity of battery systems makes it time consuming and impractical to directly measure all of their physical attributes. Physically correct descriptions of thermodynamic and kinetic battery behaviour are needed to build a truly predictive modelling framework, which would be a very powerful tool to study batteries, providing insight on difficult-to-measure internal states, such as electrolyte and ionic concentrations or potentials. In contrast, empirical models, which fit a curve to experimental data, are widely used in battery research, but have only a limited physical basis, or no physical basis at all. An example is the family of models known as equivalent circuit models. The Doyle-Fuller-Newman (DFN) model \cite{Newman1975} has dominated battery modelling for decades, but  requires 25 empirically determined input parameters REFS specific to each particular cell (c.f. parameterisation and continuum reviews in the same special issue). Atomistic models are key to building truly physics-based models and form the foundation of the multiscale modelling chain that can lead to more robust, higher throughput and predictive models.
  
-Determining parameters is not the only value of atomistic models. These models can be used to predict new behaviour not currently accessible by experiment, for reasons of cost, safety or throughput. They can also be used to optimise experimental design and use resources more efficiently, determining whether particular experiments are even worth performing. Models are useful to quantify and evaluate trends in experimental data, explaining structure-property relationships, and inform materials design strategies and libraries. Atomistic models are not just a research tool, but can be the basis of physics-based models which can accurately predict battery behaviour. Also for rapid prototyping through design - accuracy is key.
+Determining parameters is not the only value of atomistic models. These models can be used to predict new behaviour not currently accessible by experiment, for reasons of cost, safety or throughput. They can also be used to optimise experimental design and use resources more efficiently, determining whether particular experiments are even worth performing. Atomistic models are useful to quantify and evaluate trends in experimental data, explaining structure-property relationships, and inform materials design strategies and libraries. Atomistic models are not just a research tool, but can be the basis of physics-based models which can accurately predict battery behaviour.
 
-This review is of interest to the following groups. Atomistic models themselves comprise a range of different length and time scales, from the level of electronic structure calculations through conventional and linear scaling density functional theory (DFT), to longer length scales like ab initio and classical molecular dynamics (MD), grand canonical Monte Carlo (MC) and kinetic Monte Carlo (kMC). These techniques, along with some recent method developments, are summarised in the methods section, ~\ref{sec:methods}. Specific applications to anodes, electrolytes and cathodes are broken down in the following sections. Links between different methodologies are emphasised, and thus this review may be of particular interest to those looking, for example, to link DFT calculations to Monte Carlo calculations, or apply linear scaling DFT to MD, bridging possible gaps in nomenclature at different length scales.
+This review is of interest to the following groups. Atomistic models themselves comprise a range of different length and time scales, from the level of electronic structure calculations through conventional and linear scaling density functional theory (DFT), to longer length scales like \textit{ab initio} and classical molecular dynamics (MD), grand canonical Monte Carlo (MC) and kinetic Monte Carlo (kMC). These techniques, along with some recent method developments and some battery-specific observable properties, are summarised in the methods section, ~\ref{sec:methods}. Specific applications to anodes, liquid and solid electrolytes, and cathodes are broken down in the following sections. Links between different methodologies are emphasised, and thus this review may be of particular interest to those looking, for example, to link DFT calculations to Monte Carlo calculations, or apply linear scaling DFT to MD, bridging possible gaps in nomenclature at different length scales. (ACTION: CHRIS, ARIHANT, or anyone in method development - recent related reviews to be mentioned here)
 
-The anodes section, section~\ref{sec:methods} heavily focusses on graphite, the predominant anode material in virtually every Li-ion cell. The section describes atomistic modelling in the bulk, the graphite edges where initial Li-ion insertion occurs, and the solid-electrolye interphase (SEI). EXPAND ON AUDIENCE ETC
+TODO: DIAGRAM AND BREAKDOWN OF KEY COMPONENTS OF LI-ION BATTERY. ALSO TO INCLUDE SOLID STATE ELECTROLYTES. The rest of the review is structured like the components of the battery: anodes, electrolytes, and cathodes.
 
-The electrolytes section (delegate Arihant/Chris, maybe Lucy to have first go at solid electrolytes)
+The anodes section, section~\ref{sec:anodes}, heavily focuses on graphite, the predominant anode material in virtually every Li-ion cell. The section describes atomistic modelling in the bulk, the graphite edges where initial Li-ion insertion occurs, and the solid-electrolyte interphase (SEI). The bulk modelling part includes a direct comparison between experimental and theoretical thermodynamic parameters like the open circuit voltage and entropy, which will also be of interest to battery control modellers. Kinetic predictions are made and linked to predictions of the influence of the graphite edge morphology on surface states from DFT, which may be an aspect of interest to those working on battery material development and discovery. Recent work applying linear scaling DFT to challenging interfaces like the SEI will be of interest to those at the forefront of DFT method development, existing at the boundary between atomistic and continuum modelling. Lastly, as outlook recent developments in silicides to boost the anode gravimetric capacity, along with associated challenges, are summarised. Related recent relevant reviews in this area include \citeauthor{asenbauer_success_2020} \cite{asenbauer_success_2020}, summarising aspects of lithiation/delithiation mechanisms and morphological aspects in graphite and silicon oxide composites, and \citeauthor{ZHANG2021147} \cite{ZHANG2021147}, similar in scope but approaching from a more \textit{ab initio} focus. Our review here covers both aspects, including surfaces and interfaces, which have tended to be neglected, although aspects of modelling the SEI have been reviewed by \citeauthor{Wang2018} \cite{Wang2018}.
 
-The cathodes section (delegate Lucy for first draft, other cathodes people to contribute too)
+% ELECTROLYTES SUMMARY: The electrolytes section (delegate Arihant/Chris, maybe Lucy to have first go at solid electrolytes)
+Solid electrolytes (SE) are becoming increasingly popular with the rise of the electric vehicle. In contrast to anodes, there are a large range of candidate SE materials. In section~\ref{sec:solid_electrolytes} we review some of the more promising candidates currently being researched. Each material discussed has a different focus, highlighting a range of research areas which may also be applicable to other SE materials. Here, we have focused on four material families, grouping them into sulfide and oxide based SEs. Sulfide based SEs typically have a high Li-ion conduction and poor electrochemical stability against Li metal (the anode typically used for SEs). \cite{Zhu2015, Zhang2019se_rev} Li$_{10}$GeP$_2$S$_{12}$ (LGPS) is reviewed with a focus on how atomistic methods revealed the isotropic ion pathways, while Li$_6$PS$_5$\textit{X} based Li-argyodites are focused towards the relationship between ionic conductivity and anion substitution as well as atomistic predictions of occupied Li sites. The oxide section reviews Li$_7$La$_3$Zr$_2$O$_2$ (LLZO) and oxide nanocomposites. Oxides typically have a higher electrochemical stability but still suffer from dendrite formation among other issues.\cite{Zhu2015} Li$_7$La$_3$Zr$_2$O$_2$ (LLZO) is used to demonstrate how multiple atomistic methods have been applied to probe dendrite formation and ionic transport in the material, while oxide nanocomposites are used to probe the interfaces between the nanosized particles. Finally, we discuss SE interfaces, which are a huge challenge for all-solid-state batteries and therefore have been the subject of many recent atomistic investigations. Recent related reviews on solid electrolytes include \citeauthor{Sun2017se_review} \cite{Sun2017se_review}, providing a general review of solid-state batteries, and \citeauthor{Zhang2018se_review}, \cite{Zhang2018se_review} discussing the future directions of solid state batteries. \citeauthor{famprikis_fundamentals_2019} \cite{famprikis_fundamentals_2019} has highlighted the advances in the fundamental understanding of SEs and solid-state batteries, with \citeauthor{Gurung2019} \cite{Gurung2019} providing details the challenges faced when using SEs in a battery. More specific reviews of the SE interfaces include \citeauthor{Xu2018exp} \cite{Xu2018exp} and \citeauthor{Xiao2020interfacerev} \cite{Xiao2020interfacerev}, exploring the challenges and stability, and \citeauthor{Tateyama2019} \cite{Tateyama2019}, summarising the cathode-SE interface from a theoretical standpoint. From a modelling perspective, \citeauthor{Ceder2018} \cite{Ceder2018} outlines the principles that should be employed when modelling SEs and \citeauthor{Gao2020_ion_transport} \cite{Gao2020_ion_transport} discusses the techniques used for investigating ionic transport.
+% \citeauthor{Samson2019}'s \cite{Samson2019} detailed look at LLZO with a focus on experiment and \citeauthor{Zhang2019se_rev}'s investigate the current state of sulfide SEs,
+
+% CATHODES SUMMARY: The cathodes section (delegate Lucy for first draft, other cathodes people to contribute too). Plenty of reviews focused on cathodes - cite a few key ones and mention how ours differs
+The cathodes section, section~\ref{sec:cathodes}, covers a range of promising cathode materials which are used in a variety of Li-ion cells. The section describes atomistic modelling in the bulk, on the surfaces of some cathode materials, and the cathode-electrolyte interphase. The bulk modelling part includes a comparison of the different cathode crystal structures, micro-structuring, and available diffusion pathways within the material. Cathode crystal structure is a key influence on ion-diffusion. The bulk modelling part also covers a range of important properties, including redox and electronic properties, transition metal ordering, and vibrational and thermal properties. Use of first-principles modelling techniques has been essential for investigating these properties, so will be of great interest to those who utilise DFT in their research. Surface structures and morphologies of cathode particles can be difficult to determine using experimental methods alone, which is where ab-initio and classical molecular dynamics can provide vital insight. As with the anode-electrolyte interfaces, linear scaling DFT has recently been applied to cathode-electrolyte interfaces, where discussions on SEI will be of interest to those at the forefront of DFT method development. Related reviews in the area include \citeauthor{ma2018computer}'s \cite{ma2018computer} general review on modelling Li-ion battery cathode materials, \citeauthor{yan2014review}'s \cite{yan2014review} more specific review which focuses only on first-principles calculations of cathode materials, and \citeauthor{radin2017narrowing}'s \cite{radin2017narrowing} and \citeauthor{wang2018reviving}'s \cite{wang2018reviving} reviews which discuss closing the gap between theoretical and practical capacities in layered-oxide cathode materials. There is also a slightly older review by \citeauthor{daniel2014cathode} \cite{daniel2014cathode} which gives an overview of cathode materials. Our review includes a discussion on the cathode--electrolyte interface, which has recently been reviewed by \citeauthor{maleki2019controllable} \cite{maleki2019controllable}.
+
+Finally, we provide an outlook of key remaining challenges for atomistic modelling of Li batteries and possible promising future directions to resolve them.
+
 
 \begin{itemize}
     \item Ways in which atomistic results can be fed into higher scales. Where atomistic models fail and need input from other length scales. (Touch on parameterisation from experiment as well, maybe a sentence referencing the parameterisation review?)
@@ -85,8 +82,8 @@ The cathodes section (delegate Lucy for first draft, other cathodes people to co
     \item objective, relevance, novelty or importance of the current review.
     \item Description of the outline
         \begin{itemize}
-           \item Description of methods
-           \item Anodes: for a recent overview 
+           \item Description of methods: first draft done, 
+           \item Anodes: for a recent overview add
            \item Electrolytes
            \item Cathodes
            \item Outlook

@@ -12,6 +12,7 @@
 \usepackage{relsize} % for \mathsmaller
 \usepackage{hyperref}
 \usepackage{graphics, graphicx}
+\usepackage[T1]{fontenc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional macros here.  Please use \newcommand*
@@ -29,7 +30,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The document title should be given as usual.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Pushing the boundaries of atomistic methods to compute properties of lithium batteries with an outlook to experiment and continuum modelling}
+\title{Pushing the boundaries of lithium battery research with atomistic modelling on different scales}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Each author should be given as a separate \author command.
@@ -57,7 +58,7 @@
 \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Hui Yang}
-\affiliation{Department of Materials, Imperial College London, Exhibition Road, London SW7 2AZ, UK}
+\affiliation{Department of Materials, Imperial College London, London SW7 2AZ, UK}
 \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Julian Holland}
@@ -72,7 +73,8 @@
 \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
 
 \author{Aron Walsh}
-\affiliation{Department of Materials, Imperial College London, Exhibition Road, London SW7 2AZ, UK}
+\affiliation{Department of Materials, Imperial College London, London SW7 2AZ, UK}
+\alsoaffiliation{Department of Materials Science and Engineering, Yonsei University, Seoul 03722, Korea}
 \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Benjamin J. Morgan}
@@ -81,6 +83,7 @@
 
 \author{Denis Kramer}
 \affiliation{School of Engineering, University of Southampton, Southampton SO17 1BJ, UK}
+\alsoaffiliation{Faculty of Mechanical Engineering, Helmut-Schmidt University, Holstenhofweg 85, 22043 Hamburg, Germany}
 \alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{M. Saiful Islam}
@@ -104,6 +107,11 @@
 
 \begin{document}
 \maketitle
+
+\newpage
+\begin{abstract}
+Computational modelling is a vital tool in the research of batteries and their component materials. Atomistic models are key to building truly physics-based models of batteries and form the foundation of the multiscale modelling chain, leading to more robust and predictive models. These models can be applied to fundamental research questions with high predictive accuracy. For example, they can be used to predict new behaviour not currently accessible by experiment, for reasons of cost, safety, or throughput. Atomistic models are useful for quantifying and evaluating trends in experimental data, explaining structure-property relationships, and informing materials design strategies and libraries. In this review, we showcase the most prominent atomistic modelling methods and their application to electrode materials, liquid and solid electrolyte materials, and their interfaces, highlighting the diverse range of battery properties that can be investigated. Furthermore, we link atomistic modelling to experimental data and higher scale models such as continuum and control models. We also provide a critical discussion on the outlook of these materials and the main challenges for future battery research.
+\end{abstract}
 
 \newpage
 \tableofcontents
@@ -142,7 +150,7 @@ Jacqueline Sophie Edge: https://orcid.org/0000-0003-4643-2426 \newline
 %% environment, which will make the correct section or running title.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acknowledgement}
-The authors thank the Faraday Institution (https://faraday.ac.uk/; EP/S003053/1), grant number FIRG003, for funding, and Dr. Maxim Zyskin for his discussions. We also thank Mr. Amir Kosha Amiri for his graphical design expertise in constructing and formatting the figures as well as Dr. Felix Hanke and Dr. Victor Milman from BIOVIA for their comments and suggestions. 
+The authors thank the Faraday Institution (https://faraday.ac.uk/; EP/S003053/1), grant number FIRG003, for funding, and Dr. Maxim Zyskin for his discussions. We also thank Mr. Amir Kosha Amiri for his graphical design expertise in constructing and formatting the figures, as well as Dr. Felix Hanke and Dr. Victor Milman from BIOVIA for their comments and suggestions. 
 % Please use ``The authors thank \ldots'' rather than ``The authors would like to thank \ldots''.
 
 
@@ -152,12 +160,12 @@ The authors thank the Faraday Institution (https://faraday.ac.uk/; EP/S003053/1)
 %% The same is true for Supporting Information, which should use the
 %% suppinfo environment.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{suppinfo}
+% \begin{suppinfo}
 
-This will usually read something like: ``Experimental procedures and
-characterisation data for all new compounds.
+% This will usually read something like: ``Experimental procedures and
+% characterisation data for all new compounds.
 
-\end{suppinfo}
+% \end{suppinfo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The appropriate \bibliography command should be placed here.

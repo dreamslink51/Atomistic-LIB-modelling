@@ -13,10 +13,18 @@
 \usepackage{hyperref}
 \usepackage{graphics, graphicx}
 \usepackage[T1]{fontenc}
+\usepackage{soul} % For highlighting.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional macros here.  Please use \newcommand*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Highlighting for the second revision
+\newcommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}}
+%\renewcommand\hlcyan[1]{#1} % Deactivate the highlighting, for changed unhighlighted version
+
+\usepackage{lineno}
+\linenumbers
+
 \newcommand*\mycommand[1]{\texttt{\emph{#1}}}
 \newcommand*{\ofrvec}{\!\left(\mathbf{r}\right)}
 \newcommand*{\ci}{c_i}
@@ -38,36 +46,38 @@
 %% name as an \email command.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author{Lucy M. Morgan}
-\affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\affiliation{The two authors contributed equally to this review.}
+\alsoaffiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Michael P. Mercer}
-\affiliation{Department of Chemistry, Lancaster University, Bailrigg, Lancaster, LA1 4YB, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\affiliation{The two authors contributed equally to this review.}
+\alsoaffiliation{Department of Chemistry, Lancaster University, Bailrigg, Lancaster, LA1 4YB, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Arihant Bhandari}
 \affiliation{School of Chemistry, University of Southampton, Southampton SO17 1BJ, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Chao Peng}
 \affiliation{School of Engineering, University of Southampton, Southampton SO17 1BJ, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Mazharul M. Islam}
 \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Hui Yang}
 \affiliation{Department of Materials, Imperial College London, London SW7 2AZ, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Julian Holland}
 \affiliation{School of Chemistry, University of Southampton, Southampton SO17 1BJ, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Samuel W. Coles}
 \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Ryan Sharpe}
 \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
@@ -75,33 +85,33 @@
 \author{Aron Walsh}
 \affiliation{Department of Materials, Imperial College London, London SW7 2AZ, UK}
 \alsoaffiliation{Department of Materials Science and Engineering, Yonsei University, Seoul 03722, Korea}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Benjamin J. Morgan}
 \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Denis Kramer}
 \affiliation{School of Engineering, University of Southampton, Southampton SO17 1BJ, UK}
 \alsoaffiliation{Faculty of Mechanical Engineering, Helmut-Schmidt University, Holstenhofweg 85, 22043 Hamburg, Germany}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{M. Saiful Islam}
 \affiliation{Department of Chemistry, University of Bath, Claverton Down, Bath BA2 7AY, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Harry E. Hoster}
 \affiliation{Department of Chemistry, Lancaster University, Bailrigg, Lancaster, LA1 4YB, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 
 \author{Jacqueline Sophie Edge}
 \affiliation{Department of Mechanical Engineering, Imperial College London, London, SW7 2AZ, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 \email{j.edge@imperial.ac.uk}
 
 \author{Chris-Kriton Skylaris}
 \affiliation{School of Chemistry, University of Southampton, Southampton SO17 1BJ, UK}
-\alsoaffiliation{The Faraday Institution, Quad One, Becquerel Avenue, Harwell Campus, Didcot, OX11 0RA, UK}
+\alsoaffiliation{The Faraday Institution, Quad One, Harwell Campus, Didcot, OX11 0RA, UK}
 \email{c.skylaris@soton.ac.uk}
 
 
@@ -125,24 +135,24 @@ Computational modelling is a vital tool in the research of batteries and their c
 \subfile{sections/outlook}
 
 
-\section*{ORCID ids}
-% Please place ORCID ids here.
-Lucy M. Morgan : https://orcid.org/0000-0002-6432-3760 \newline
-Michael P. Mercer: https://orcid.org/0000-0001-7578-3554 \newline
-Arihant Bhandari: https://orcid.org/0000-0002-2914-9402 \newline
-Chao Peng: https://orcid.org/0000-0003-3099-2808 \newline
-Mazharul M. Islam: https://orcid.org/0000-0002-5638-8265 \newline
-Hui Yang: https://orcid.org/0000-0002-7890-5411 \newline
-Julian Holland: https://orcid.org/0000-0001-8959-0112 \newline
-Samuel W. Coles: https://orcid.org/0000-0001-9722-5676 \newline
-Ryan Sharpe: https://orcid.org/0000-0002-1337-0209 \newline
-Aron Walsh: https://orcid.org/0000-0001-5460-7033 \newline
-Benjamin J. Morgan: https://orcid.org/0000-0002-3056-8233 \newline
-Denis Kramer: https://orcid.org/0000-0003-0605-1047 \newline
-Harry E. Hoster: https://orcid.org/0000-0001-6379-5275 \newline
-M. Saiful Islam: https://orcid.org/0000-0002-8077-6241 \newline
-Chris-Kriton Skylaris: https://orcid.org/0000-0003-0258-3433 \newline
-Jacqueline Sophie Edge: https://orcid.org/0000-0003-4643-2426 \newline
+% \section*{ORCID ids}
+% % Please place ORCID ids here.
+% Lucy M. Morgan : https://orcid.org/0000-0002-6432-3760 \newline
+% Michael P. Mercer: https://orcid.org/0000-0001-7578-3554 \newline
+% Arihant Bhandari: https://orcid.org/0000-0002-2914-9402 \newline
+% Chao Peng: https://orcid.org/0000-0003-3099-2808 \newline
+% Mazharul M. Islam: https://orcid.org/0000-0002-5638-8265 \newline
+% Hui Yang: https://orcid.org/0000-0002-7890-5411 \newline
+% Julian Holland: https://orcid.org/0000-0001-8959-0112 \newline
+% Samuel W. Coles: https://orcid.org/0000-0001-9722-5676 \newline
+% Ryan Sharpe: https://orcid.org/0000-0002-1337-0209 \newline
+% Aron Walsh: https://orcid.org/0000-0001-5460-7033 \newline
+% Benjamin J. Morgan: https://orcid.org/0000-0002-3056-8233 \newline
+% Denis Kramer: https://orcid.org/0000-0003-0605-1047 \newline
+% Harry E. Hoster: https://orcid.org/0000-0001-6379-5275 \newline
+% M. Saiful Islam: https://orcid.org/0000-0002-8077-6241 \newline
+% Chris-Kriton Skylaris: https://orcid.org/0000-0003-0258-3433 \newline
+% Jacqueline Sophie Edge: https://orcid.org/0000-0003-4643-2426 \newline
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The "Acknowledgement" section can be given in all manuscript
